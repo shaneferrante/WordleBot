@@ -1,7 +1,11 @@
 public class WordleBotRunner {
 
   public static void main(String[] args) {
-    WordsFinder wf = new WordsFinder("eariotnslcudpmy");
+    testPlayer();
+  }
+
+  public static void findWords() {
+    WordsFinder wf = new WordsFinder("acdeilmnoprsuty");
   }
 
   public static void playOnce(String word) {
