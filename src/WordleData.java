@@ -25,4 +25,22 @@ public class WordleData {
     }
   }
 
+  public WordleData(boolean sorted) {
+    try {
+      File file = new File("C:\\Users\\shane\\CS3500\\WordleBot\\src\\PossibleWords.txt");
+      Scanner sc = new Scanner(file);
+      String[] w = sc.nextLine().split("\",\"");
+      if (sorted) {
+        Arrays.sort(w);
+      }
+      List<String> l = List.of(w);
+      words = new ArrayList<String>();
+      for (String s : l) {
+        words.add(s);
+      }
+    } catch (FileNotFoundException e) {
+      System.out.println("error");
+    }
+  }
+
 }

@@ -1,7 +1,7 @@
 public class WordleBotRunner {
 
   public static void main(String[] args) {
-    testPlayer();
+    playOnce("thorn");
   }
 
   public static void findWords() {
@@ -36,6 +36,10 @@ public class WordleBotRunner {
       total += counts[i]*i;
     }
     System.out.println("Average: " + (double)total/data.words.size());
+  }
+
+  public static void getWordOnDay(int day) {
+    System.out.println(new WordleData(false).words.get(day+2));
   }
 
 }
